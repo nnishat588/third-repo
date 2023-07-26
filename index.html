@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Third assignment</title>
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/2d55cb1cf5.js" crossorigin="anonymous"></script>
+    <!-- font-family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap" rel="stylesheet">
+    <!-- custom tailwind -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+      <style>
+        .lato{
+            font-family: 'Lato', sans-serif;
+        }
+      </style>
+</head>
+<body class="lato">
+    <header>
+        <nav class="px-32 py-8 ">
+            <div class="navbar flex justify-between gap-6  bg-[#F85559] rounded-[600px]">
+                <div class=" flex ">
+                  
+                    <ul class="flex justify-between gap-4 text-white" >
+                      <li><a>Homepage</a></li>
+                      <li><a>Portfolio</a></li>
+                      <li><a>About</a></li>
+                    </ul>
+                  </div>
+                
+                <div class="lg:pl-68 text-white">
+                    <img src="images/logo.png" alt="">
+                  <a class="btn btn-ghost normal-case text-xl items-center">Fruit Burst</a>
+                </div>
+                <div class="border-4 rounded-xl">
+                  <button class="flex justify-between gap-16 bg-[#FFFFFF]">
+                    <h2>Search Here</h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                  </button>
+                </div>
+              </div>
+        </nav>
+        <!-- slider section -->
+        <div class="carousel w-full">
+            <div id="slide1" class="carousel-item relative w-full">
+              
+                <div class="hero min-h-screen" style="background-image: url(images/banner1.png);">
+                    <div class="hero-overlay bg-opacity-60"></div>
+                    <div class="hero-content text-center text-neutral-content">
+                      <div class="max-w-md">
+                        <h1 class="mb-5 text-5xl font-bold text-white">Exotic tastes at your <br> doorstep</h1>
+                        <p class="mb-5 text-grey">We supply highly quality organic products</p>
+                        <button class="btn bg-[#F85559] text-white">Shop Now</button>
+                      </div>
+                    </div>
+                  </div>
+
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide4" class="btn btn-circle">❮</a> 
+                <a href="#slide2" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide2" class="carousel-item relative w-full">
+              <img src="/images/banner2.png" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide1" class="btn btn-circle">❮</a> 
+                <a href="#slide3" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide3" class="carousel-item relative w-full">
+              <img src="/images/banner3.png" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide2" class="btn btn-circle">❮</a> 
+                <a href="#slide4" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide4" class="carousel-item relative w-full">
+              <img src="/images/banner4.png" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide3" class="btn btn-circle">❮</a> 
+                <a href="#slide1" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+          </div>
+    </header>
+    <main>
+        <!-- deal section -->
+        <section class="lg:h-[700px] mt-40">
+            <div class="grid grid-cols-1 items-center">
+              <div class="flex justify-around ">
+            <div>
+                <h1 class="text-4xl font-bold mb-4">Deal of the day</h1>
+                <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical <br> Latin literature from 45 BC, making it over 2000 years old.</p>
+            </div>
+            <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+                <div class="flex flex-col">
+                  <span class="countdown font-mono text-5xl">
+                    <span style="--value:15;"></span>
+                  </span>
+                  days
+                </div> 
+                <div class="flex flex-col">
+                  <span class="countdown font-mono text-5xl">
+                    <span style="--value:10;"></span>
+                  </span>
+                  hours
+                </div> 
+                <div class="flex flex-col">
+                  <span class="countdown font-mono text-5xl">
+                    <span style="--value:24;"></span>
+                  </span>
+                  min
+                </div> 
+                <div class="flex flex-col">
+                  <span class="countdown font-mono text-5xl">
+                    <span style="--value:29;"></span>
+                  </span>
+                  sec
+                </div>
+              </div>
+            </div>
+              <!-- card section -->
+              
+              <div class="flex justify-around mt-20 items-center">
+                <!-- cart-1 -->
+              <div class="card  w-96 bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img src="/images/fruit6.png" alt="" 
+              class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">12.90$ - 18.85$</h2>
+                  <p>Apple </p>
+                  <div class="rating rating-lg rating-half">
+                    <input type="radio" name="rating-10" class="rating-hidden" />
+                    <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                    <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                    <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" checked />
+                    <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                    <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                    <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                    <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                    <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                    <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                    <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                  </div>
+                  <div class="card-actions">
+                    <button class="btn bg-transparent">Details </button>
+                  </div>
+                </div>
+              </div>
+                         <!-- cart-1 -->
+         <div class="card  w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="/images/fruit6.png" alt="" 
+        class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">12.90$ - 18.85$</h2>
+            <p>Apple </p>
+            <div class="rating rating-lg rating-half">
+              <input type="radio" name="rating-10" 
+class="rating-hidden" />
+              <input type="radio" name="rating-10" 
+class="bg-green-500 mask mask-star-2 
+mask-half-1" />
+              <input type="radio" name="rating-10" 
+class="bg-green-500 mask mask-star-2 
+mask-half-2" />
+              <input type="radio" name="rating-10" 
+class="bg-green-500 mask mask-star-2 
+mask-half-1" checked />
+              <input type="radio" name="rating-10" 
+class="bg-green-500 mask mask-star-2 
+mask-half-2" />
+              <input type="radio" name="rating-10" 
+class="bg-green-500 mask mask-star-2 
+mask-half-1" />
+              <input type="radio" name="rating-10" 
+class="bg-green-500 mask mask-star-2 
+mask-half-2" />
+              <input type="radio" name="rating-10" 
+class="bg-green-500 mask mask-star-2 
+mask-half-1" />
+              <input type="radio" name="rating-10" 
+class="bg-green-500 mask mask-star-2 
+mask-half-2" />
+              <input type="radio" name="rating-10" 
+class="bg-green-500 mask mask-star-2 
+mask-half-1" />
+              <input type="radio" name="rating-10" 
+class="bg-green-500 mask mask-star-2 
+mask-half-2" />
+            </div>
+            <div class="card-actions">
+              <button class="btn bg-transparent">Details </
+button>
+            </div>
+          </div>
+        </div>
+                   <!-- cart-1 -->
+                   <div class="card  w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="/images/fruit6.png" alt="" 
+                  class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">12.90$ - 18.85$</h2>
+                      <p>Apple </p>
+                      <div class="rating rating-lg rating-half">
+                        <input type="radio" name="rating-10" 
+         class="rating-hidden" />
+                        <input type="radio" name="rating-10" 
+         class="bg-green-500 mask mask-star-2 
+         mask-half-1" />
+                        <input type="radio" name="rating-10" 
+         class="bg-green-500 mask mask-star-2 
+         mask-half-2" />
+                        <input type="radio" name="rating-10" 
+         class="bg-green-500 mask mask-star-2 
+         mask-half-1" checked />
+                        <input type="radio" name="rating-10" 
+         class="bg-green-500 mask mask-star-2 
+         mask-half-2" />
+                        <input type="radio" name="rating-10" 
+         class="bg-green-500 mask mask-star-2 
+         mask-half-1" />
+                        <input type="radio" name="rating-10" 
+         class="bg-green-500 mask mask-star-2 
+         mask-half-2" />
+                        <input type="radio" name="rating-10" 
+         class="bg-green-500 mask mask-star-2 
+         mask-half-1" />
+                        <input type="radio" name="rating-10" 
+         class="bg-green-500 mask mask-star-2 
+         mask-half-2" />
+                        <input type="radio" name="rating-10" 
+         class="bg-green-500 mask mask-star-2 
+         mask-half-1" />
+                        <input type="radio" name="rating-10" 
+         class="bg-green-500 mask mask-star-2 
+         mask-half-2" />
+                      </div>
+                      <div class="card-actions">
+                        <button class="btn bg-transparent">Details </
+         button>
+                      </div>
+                    </div>
+                  </div>
+                             <!-- cart-1 -->
+         <div class="card  w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="/images/fruit6.png" alt="" 
+        class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">12.90$ - 18.85$</h2>
+            <p>Apple </p>
+            <div class="rating rating-lg rating-half">
+              <input type="radio" name="rating-10" 
+class="rating-hidden" />
+              <input type="radio" name="rating-10" 
+class="bg-green-500 mask mask-star-2 
+mask-half-1" />
+              <input type="radio" name="rating-10" 
+class="bg-green-500 mask mask-star-2 
+mask-half-2" />
+              <input type="radio" name="rating-10" 
+class="bg-green-500 mask mask-star-2 
+mask-half-1" checked />
+              <input type="radio" name="rating-10" 
+class="bg-green-500 mask mask-star-2 
+mask-half-2" />
+              <input type="radio" name="rating-10" 
+class="bg-green-500 mask mask-star-2 
+mask-half-1" />
+              <input type="radio" name="rating-10" 
+class="bg-green-500 mask mask-star-2 
+mask-half-2" />
+              <input type="radio" name="rating-10" 
+class="bg-green-500 mask mask-star-2 
+mask-half-1" />
+              <input type="radio" name="rating-10" 
+class="bg-green-500 mask mask-star-2 
+mask-half-2" />
+              <input type="radio" name="rating-10" 
+class="bg-green-500 mask mask-star-2 
+mask-half-1" />
+              <input type="radio" name="rating-10" 
+class="bg-green-500 mask mask-star-2 
+mask-half-2" />
+            </div>
+            <div class="card-actions">
+              <button class="btn bg-transparent">Details </
+button>
+            </div>
+          </div>
+        </div>
+
+
+
+            </div>
+        
+        </section>
+
+
+    </main>
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
